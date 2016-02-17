@@ -26,4 +26,14 @@ class LevelATest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals('lööl', $palo->generatePalindrome());
     }
+
+    public function testD()
+    {
+        $token = date('His');
+        $nekot = strrev($token);
+        $palo = new Palindrome($token."l\tö");
+
+        $this->assertEquals($token."l\töö\tl".$nekot, $palo->generatePalindrome());
+    }
+
 }

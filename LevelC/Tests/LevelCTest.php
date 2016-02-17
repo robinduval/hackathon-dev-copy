@@ -26,10 +26,27 @@ class LevelTreeTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(false, $res);
     }
+
     public function testD()
     {
         $res = RotationString::isRotation('coucoucou', 'cou');
 
         $this->assertEquals(false, $res);
+    }
+
+    public function testE()
+    {
+        $token = date('His');
+        $res = RotationString::isRotation($token.'coucoucou', $token.'cou');
+
+        $this->assertEquals(false, $res);
+    }
+
+    public function testF()
+    {
+        $token = date('His');
+        $res = RotationString::isRotation($token."onRigoleBien!", "onRigoleBien!".$token);
+
+        $this->assertEquals(true, $res);
     }
 }

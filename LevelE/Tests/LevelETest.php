@@ -66,4 +66,13 @@ class LevelETest extends \PHPUnit_Framework_TestCase
         $res = $int1->add($int2);
         $this->assertEquals($res->getValue(), '98790177884071772867454550454125948955911469846887567859309242720312114047953488837504696957432558536062290093126753802265262965629681982522186601502219918656966647718611921781994071109662957331436048530036908601283629669974');
     }
+
+    public function testHeigh()
+    {
+        $token = date('His');
+        $int1 = new MaxiInteger((string)$token);
+        $int2 = new MaxiInteger('2');
+        $res = $int1->add($int2);
+        $this->assertEquals($res->getValue(), (string)$token+2);
+    }
 }

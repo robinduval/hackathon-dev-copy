@@ -48,4 +48,4 @@ if [ $1 ]; then
         NAME=$1;
 fi
 
-echo $SCORE > $NAME.score
+echo "SCORE:"$SCORE

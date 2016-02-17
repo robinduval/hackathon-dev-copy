@@ -96,4 +96,34 @@ PLOP;
 PLOP;
         $this->assertEquals($res, $excpeted);
     }
+
+
+    public function testE()
+    {
+        $matrix = new MyMatrix(3, 5);
+        $token = date('His');
+        $str =
+            '0,0,0,0,72
+            66,987,55487,6,213154
+            847,95,8987,6198494,'.$token;
+        $matrix->str2Matrix($str);
+        $res = $matrix->prettyMatrix();
+        $excpeted = <<<PLOP
+0\t0\t0\t0\t72\t
+66\t987\t55487\t6\t213154\t
+847\t95\t8987\t6198494\t$token\t
+
+PLOP;
+        $this->assertEquals($res, $excpeted);
+
+        $res = $matrix->fillZero()->prettyMatrix();
+        $excpeted = <<<PLOP
+0\t0\t0\t0\t0\t
+0\t0\t0\t0\t213154\t
+0\t0\t0\t0\t$token\t
+
+PLOP;
+        $this->assertEquals($res, $excpeted);
+    }
+
 }
