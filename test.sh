@@ -10,37 +10,37 @@ fi
 phpunit LevelB;
 LEVELB=$?;
 if [ $LEVELB = 0 ]; then
-        SCORE=$((SCORE+10));
+        SCORE=$((SCORE+7));
 fi
 
 phpunit LevelC;
 LEVELC=$?;
 if [ $LEVELC = 0 ]; then
-        SCORE=$((SCORE+15));
+        SCORE=$((SCORE+10));
 fi
 
 phpunit LevelD;
 LEVELD=$?;
 if [ $LEVELD = 0 ]; then
-        SCORE=$((SCORE+20));
+        SCORE=$((SCORE+18));
 fi
 
 phpunit LevelE;
 LEVELE=$?;
 if [ $LEVELE = 0 ]; then
-        SCORE=$((SCORE+50));
+        SCORE=$((SCORE+30));
 fi
 
 phpunit LevelF;
 LEVELF=$?;
 if [ $LEVELF = 0 ]; then
-        SCORE=$((SCORE+100));
+        SCORE=$((SCORE+50));
 fi
 
 phpunit LevelG;
 LEVELG=$?;
 if [ $LEVELG = 0 ]; then
-        SCORE=$((SCORE+200));
+        SCORE=$((SCORE+80));
 fi
 
 NAME='plop';
