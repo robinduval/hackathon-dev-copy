@@ -8,7 +8,7 @@ Download the zip : https://github.com/robinduval/hackathon-dev-copy/archive/mast
 git init
 git add .
 git commit -m "first commit"
-git remote add origin git@github.com:<YOURNAME>/hackathon-dev-copy.git
+git remote add origin git@github.com:YOURNAME/hackathon-dev-copy.git
 git push -u origin master
 </pre>
 
