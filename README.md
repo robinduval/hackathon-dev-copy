@@ -22,6 +22,6 @@ git push -u origin master
 ./test.sh
 </pre>
 
-## To send a proposition
+## To launch test in our dashboard
 
 http://hackathon-dashboard.dev
