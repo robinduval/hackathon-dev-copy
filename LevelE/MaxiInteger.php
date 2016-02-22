@@ -45,7 +45,23 @@ class MaxiInteger
      */
     private function realSum($a, $b)
     {
-        /** @TODO */
+        $res = '';
+        $carry = 0;
+        $maxLength = strlen($a->getValue()) - 1;
+
+        for ($i = $maxLength; $i >= 0; --$i) {
+            $x = $a->getNthOfMaxiInteger($i);
+            $y = $b->getNthOfMaxiInteger($i);
+            $value = $x + $y + $carry;
+            $carry = (($value) >= 10) ? 1 : 0;
+            $res[] = $value % 10;
+        }
+
+        if ($carry) {
+            $res[] = 1;
+        }
+
+        return new self(strrev(implode($res)));
     }
 
     private function setValue($value)

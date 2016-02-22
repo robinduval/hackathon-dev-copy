@@ -22,7 +22,27 @@ class Bobby
      */
     public function giveMoney($price)
     {
-        /** @TODO */
+        arsort($this->wallet, SORT_NUMERIC);
+        $elementToDelete = array();
+        $toGive = 0;
+
+        foreach ($this->wallet as $k => $element) {
+            if (is_numeric($element)) {
+                $elementToDelete[] = $k;
+                $toGive += $element;
+            }
+
+            if ($toGive >= $price) {
+                foreach ($elementToDelete as $del) {
+                    unset($this->wallet[$del]);
+                }
+                $this->computeTotal();
+
+                return true;
+            }
+        }
+
+        $this->computeTotal();
 
         return false;
     }

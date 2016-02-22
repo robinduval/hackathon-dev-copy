@@ -20,9 +20,10 @@ class Palindrome
      */
     public function generatePalindrome()
     {
-        /** @TODO */
+        preg_match_all('/./us', $this->str, $ar);
+        $res = implode('', array_reverse($ar[0]));
 
-        return 'abccba';
+        return $this->str.$res;
     }
 
-}
+};
