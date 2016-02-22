@@ -49,3 +49,4 @@ if [ $1 ]; then
 fi
 
 echo "SCORE:"$SCORE
+echo $SCORE > score.txt
