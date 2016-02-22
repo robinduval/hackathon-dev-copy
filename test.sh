@@ -48,5 +48,10 @@ if [ $1 ]; then
         NAME=$1;
 fi
 
+DATE='000000';
+if [ $2 ]; then
+        DATE=$2
+fi
+
 echo "SCORE:"$SCORE
-echo $SCORE > score.txt
+echo "$NAME;$DATE;$SCORE" >> ../../../scores.csv
